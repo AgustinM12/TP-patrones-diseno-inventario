@@ -22,15 +22,17 @@ async function connect(URI: env): Promise<boolean> {
             } else {
                 resolve(false);
             }
-        }, 2000);
+        }, 1000);
     });
 }
 
 class DbConnection {
     private static instancia: DbConnection;
+    private estadoConexion: boolean;
 
-    private constructor() { }
-
+    private constructor() {
+        this.estadoConexion = false;
+    }
     public static obtenerInstacia(): DbConnection {
         if (!DbConnection.instancia) {
             DbConnection.instancia = new DbConnection()
@@ -40,25 +42,42 @@ class DbConnection {
 
     public async conectarDB(URI: env): Promise<void> {
         try {
-            if (URI != "") {
+            if (!URI) {
+                console.log("Debe proporcionar una URI de conexion a la DB");
+            } else {
 
                 const conexionMongo: boolean = await connect(URI)
 
                 console.log("Inicio el intento de conexion");
 
                 if (conexionMongo) {
+                    this.estadoConexion = conexionMongo
                     console.log("Base de datos conectada");
                 } else {
-                    console.log("No se pudo conectar a la base de datos");
+                    throw new Error("No se pudo conectar a la base de datos");
                 }
-            } else {
-                console.log("Debe proporcionar una URI de conexion a la DB");
             }
         } catch (error) {
-            console.log("Error al conectar a la DB", error);
+            console.log("Error inesperado: ", error);
         }
+    }
+
+    public async desconectarDB(): Promise<void> {
+
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                if (this.estadoConexion) {
+                    resolve(console.log("Desconexion exitosaa a la base de datos"));
+                } else {
+                    resolve(console.log("No hay una conexion activa"));
+                }
+            }, 1000)
+        })
     }
 }
 
+
 const mongoConnect = DbConnection.obtenerInstacia()
+mongoConnect.desconectarDB()
 mongoConnect.conectarDB("mongodb://localhost:27017/")
+mongoConnect.desconectarDB()
