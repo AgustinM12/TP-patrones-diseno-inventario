@@ -1,9 +1,9 @@
 # Ejercicio 1: Gestionar Configuración Global del Sistema
 ### Objetivo: Implementar un patrón Singleton para gestionar la configuración global de la aplicación de inventario.
-● Crear una clase Configuracion que siga el patrón Singleton.
-● Esta clase debe almacenar propiedades como idioma, rutaBaseDatos y nivelRegistro.
-● Agregar métodos para obtener y actualizar cada una de estas propiedades.
-● Asegurar que solo exista una instancia de Configuracion en toda la aplicación.
+- ● Crear una clase Configuracion que siga el patrón Singleton.
+- ● Esta clase debe almacenar propiedades como idioma, rutaBaseDatos y nivelRegistro.
+- ● Agregar métodos para obtener y actualizar cada una de estas propiedades.
+- ● Asegurar que solo exista una instancia de Configuracion en toda la aplicación.
 
 ```typescript
 type lenguaje = "español" | "ingles" | "portugues";
@@ -51,11 +51,11 @@ class Configuracion {
 
 # Ejercicio 2: Control de Conexiones a la Base de Datos
 ### Objetivo: Utilizar el patrón Singleton para manejar la conexión a la base de datos de inventario.
-● Crear una clase ConexionDB que siga el patrón Singleton.
-● Esta clase debe manejar la conexión a una base de datos ficticia, con propiedades
+- ● Crear una clase ConexionDB que siga el patrón Singleton.
+- ● Esta clase debe manejar la conexión a una base de datos ficticia, con propiedades
 como host, puerto y usuario.
-● Implementar métodos para conectar y desconectar la base de datos.
-● Garantizar que todas las partes de la aplicación utilicen la misma instancia de
+- ● Implementar métodos para conectar y desconectar la base de datos.
+- ● Garantizar que todas las partes de la aplicación utilicen la misma instancia de
 ConexionDB.
 
 ```typescript

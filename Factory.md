@@ -1,11 +1,11 @@
 # Ejercicio 1: Crear Dispositivos de Entrada
 ### Objetivo: Utilizar el patrón Factory Method para crear diferentes tipos de dispositivos de entrada.
-● Crear una clase DispositivoEntradaFactory con un método crearDispositivo que,
+- ● Crear una clase DispositivoEntradaFactory con un método crearDispositivo que,
 basado en el tipo de dispositivo ("Teclado", "Ratón", "Scanner"), devuelva una
 instancia de la clase adecuada.
-● Crear clases específicas para cada tipo de dispositivo (Teclado, Ratón, Scanner), cada
+- ● Crear clases específicas para cada tipo de dispositivo (Teclado, Ratón, Scanner), cada
 una con sus propias propiedades (Ej.: tipoConexion, marca).
-● Integrar la creación de estos dispositivos en el sistema de inventario.
+- ● Integrar la creación de estos dispositivos en el sistema de inventario.
 
 ```typescript
 // ? Enum para tipos de dispositivos
@@ -106,13 +106,13 @@ class Inventario {
 
 # Ejercicio 2: Fabricar Periféricos de Salida
 ### Objetivo: Implementar el patrón Factory Method para crear diferentes periféricos de salida.
-● Crear una clase PerifericoSalidaFactory con un método crearPeriferico que, basado en
+- ● Crear una clase PerifericoSalidaFactory con un método crearPeriferico que, basado en
 el tipo ("Monitor", "Impresora", "Proyector"), devuelva una instancia de la clase
 correspondiente.
-● Crear clases específicas para cada tipo de periférico (Monitor, Impresora, Proyector),
+- ● Crear clases específicas para cada tipo de periférico (Monitor, Impresora, Proyector),
 con propiedades particulares (Ej.: resolución para Monitor, tipoImpresión para
 Impresora).
-● Asegurar que el factory maneje correctamente la creación de cada periférico según el
+- ● Asegurar que el factory maneje correctamente la creación de cada periférico según el
 tipo especificado.
 
 ```typescript

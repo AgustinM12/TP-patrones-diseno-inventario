@@ -1,10 +1,10 @@
 # Ejercicio 1: Notificación de Mantenimiento Preventivo
 ### Objetivo: Utilizar el patrón Observer para notificar al departamento de mantenimiento cuando un equipo alcanza un cierto tiempo de uso.
-● Crear una clase DepartamentoMantenimiento que actúe como observador y reciba
+- ● Crear una clase DepartamentoMantenimiento que actúe como observador y reciba
 notificaciones cuando un equipo necesite mantenimiento preventivo.
-● Implementar la clase Equipo que permita agregar observadores y notifique a los
+- ● Implementar la clase Equipo que permita agregar observadores y notifique a los
 observadores cuando su tiempo de uso alcance un umbral definido.
-● Definir propiedades como nombre, tipo, estado y tiempoUso en la clase Equipo.
+- ● Definir propiedades como nombre, tipo, estado y tiempoUso en la clase Equipo.
 
 ```typescript
 interface DepartamentoMantenimiento {
@@ -67,11 +67,11 @@ class Soporte implements DepartamentoMantenimiento {
 
 # Ejercicio 2: Actualización de Inventario en Tiempo Real
 ### Objetivo: Implementar el patrón Observer para actualizar en tiempo real la interfaz de usuario cuando se realicen cambios en el inventario.
-● Crear una clase InterfazUsuario que actúe como observador y actualice la
+- ● Crear una clase InterfazUsuario que actúe como observador y actualice la
 visualización del inventario cuando se agreguen, eliminen o modifiquen equipos.
-● Modificar la clase Inventario para que permita agregar observadores y notifique a los
+- ● Modificar la clase Inventario para que permita agregar observadores y notifique a los
 observadores correspondientes cuando ocurra un cambio en la lista de equipos.
-● Asegurar que múltiples instancias de InterfazUsuario puedan recibir y manejar las
+- ● Asegurar que múltiples instancias de InterfazUsuario puedan recibir y manejar las
 notificaciones adecuadamente.
 
 ```typescript

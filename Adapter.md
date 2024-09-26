@@ -1,11 +1,11 @@
 # > Ejercicio 1: Integrar Sistema de Facturación Antiguo
 ### Objetivo: Implementar el patrón Adaptador para integrar un sistema antiguo de facturación con el nuevo sistema de inventario.
-● Crear una clase FacturacionVieja que tenga métodos como crearFactura y
+- ● Crear una clase FacturacionVieja que tenga métodos como crearFactura y
 obtenerFactura.
-● Implementar una clase AdaptadorFacturacion que permita utilizar FacturacionVieja con
+- ● Implementar una clase AdaptadorFacturacion que permita utilizar FacturacionVieja con
 la nueva interfaz IFacturacion, la cual requiere métodos como generarFactura y
 consultarFactura.
-● Asegurar que las facturas generadas a través del adaptador sean compatibles con el
+- ● Asegurar que las facturas generadas a través del adaptador sean compatibles con el
 nuevo sistema de inventario.
 
 **Desarrollo**
@@ -77,12 +77,12 @@ class AdaptadorFacturacion {
 ```
 # Ejercicio 2: Compatibilidad con APIs Externas
 ### Objetivo: Utilizar el patrón Adaptador para integrar una API externa de proveedores con el sistema de inventario existente.
-● Crear una clase ProveedorExternoAPI que ofrezca métodos como fetchProductos y
+- ● Crear una clase ProveedorExternoAPI que ofrezca métodos como fetchProductos y
 updateStock.
-● Implementar una clase AdaptadorProveedor que permita utilizar ProveedorExternoAPI
+- ● Implementar una clase AdaptadorProveedor que permita utilizar ProveedorExternoAPI
 con la interfaz IProveedor, que requiere métodos como obtenerProductos y
 actualizarInventario.
-● Asegurar que los datos obtenidos de la API externa se adapten correctamente al
+- ● Asegurar que los datos obtenidos de la API externa se adapten correctamente al
 formato requerido por el sistema de inventario.
 
 ```typescript
